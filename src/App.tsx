@@ -73,7 +73,7 @@ function App() {
 
       setChatState(prev => ({
         ...prev,
-        messages: [...prev.messages, userMessage, assistantMessage],
+        messages: [...prev.messages, assistantMessage],
         isLoading: false
       }));
     } catch (error) {

@@ -2,6 +2,7 @@ import React from 'react';
 import { Message } from '../types';
 import { formatTimestamp } from '../utils';
 import { Bot, User } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 
 interface ChatMessageProps {
   message: Message;
@@ -18,7 +19,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
         </div>
         <div className={`flex flex-col ${isUser ? 'items-end' : 'items-start'}`}>
           <div className={`px-4 py-2 rounded-lg ${isUser ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-800'}`}>
-            <p className="whitespace-pre-wrap">{message.content}</p>
+            <div className="whitespace-pre-wrap"><ReactMarkdown>{message.content}</ReactMarkdown></div>
           </div>
           <span className="text-xs text-gray-500 mt-1">
             {formatTimestamp(message.timestamp)}
