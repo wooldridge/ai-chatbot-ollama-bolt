@@ -6,6 +6,7 @@ A React-based chatbot that connects to Ollama running locally to provide a chat 
 
 1. [Ollama](https://ollama.ai/) installed on your machine
 2. Llama 3.2 model pulled in Ollama
+3. Node.js and npm
 
 ## Setup Instructions
 
@@ -18,8 +19,9 @@ A React-based chatbot that connects to Ollama running locally to provide a chat 
    ```
    ollama serve
    ```
-4. Run this application:
+4. Install and run this application:
    ```
+   npm install
    npm run dev
    ```
 
